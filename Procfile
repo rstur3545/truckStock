@@ -1,1 +1,1 @@
-web:gunicorn truckstock.py
+web: gunicorn truckstock.py --log-file -
