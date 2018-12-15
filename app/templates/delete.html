@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+<h1>Truck Inventory Delete by ID or Location</h1><br><br>
+
+<form action="/delete" method="post" novalidate>
+  {{ form3.hidden_tag() }}
+
+<div class="form-group">
+  
+      {{ form3.idd.label }} 
+      {{ form3.idd(size=32) }}
+  
+</div>
+        
+<p>
+      {{ form3.submit() }} 
+     
+ </p>
+
+
+</form>
+<br><br>
+<form action="/delete" method="post" novalidate>
+   {{ form4.hidden_tag() }}
+
+<div class="form-group">
+
+  
+        {{ form4.location.label }} 
+        {{ form4.location(size=10) }}
+</div>
+        
+<p>
+        {{ form4.submit() }} 
+       
+ </p>
+
+
+</form>
+</div>
+
+    
+
+
+
+
+
+{% endblock %}

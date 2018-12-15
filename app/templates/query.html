@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+  
+  
+<h1>Truck Inventory Query by Part or Location</h1><br><br>
+
+<form action="/query" method="post" novalidate>
+  {{ form1.hidden_tag() }}
+  <div class="form-group">
+  
+    {{ form1.partnumber.label }} 
+    {{ form1.partnumber(size=32) }}
+  
+  </div>
+  <div class="form-group">
+
+  
+      {{ form1.location.label }} 
+      {{ form1.location(size=10) }}
+  </div>
+
+      
+  <p>
+      {{ form1.submit() }} 
+     
+  </p>
+
+
+</form>
+
+{{location}}
+
+<table class = "table">
+    <thead>
+       <th scope='col'>ID</th> <th scope ="col">Partnumber</th><th scope ="col">Location</th><th scope ="col">Quqntity</th><th scope ="col">Description</th>
+    </thead>
+    <tbody>
+    {% for i in selectedpart %}
+      <tr>
+        
+         
+         
+     <td><a href="http://localhost:5000/update?data={{i.id}}">{{i.id}}</a></td><td> {{i.partnumber}} </td><td>{{i.location}}</td><td>{{i.quantity}}</td><td>{{i.description}}</td>
+         
+      </tr>
+        
+    {% endfor %}
+    </tbody>
+  
+</table>
+</div>
+    
+
+
+
+    
+
+
+
+
+
+{% endblock %}
