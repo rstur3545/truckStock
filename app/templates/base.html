@@ -17,14 +17,14 @@ from flask import Flask, url_for
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href=url_for('/add')>Add <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href=url_for('add')>Add <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href=url_for('/query')>Query</a>
+                      <a class="nav-link" href=url_for('query')>Query</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href=url_for('/delete')>Delete Page</a>
+                      <a class="nav-link" href=url_for('delete')>Delete Page</a>
                     </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
